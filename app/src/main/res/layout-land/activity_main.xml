@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/exprEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:ems="10"
+        android:textAlignment="textEnd"
+        android:inputType="textPersonName"
+        android:hint="0"
+        android:textColorHint="#aaa"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:padding="4dp"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exprEdt" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTv">
+
+        <TableRow android:layout_weight="1">
+
+            <Button
+                android:id="@+id/degreeBtn"
+                style="@style/CalcButton"
+                android:text="@string/numberDegree" />
+
+            <Button
+                android:id="@+id/leftBracketBtn"
+                style="@style/CalcButton"
+                android:text="("
+                android:layout_weight="0.5"/>
+
+            <Button
+                android:id="@+id/rightBracketBtn"
+                style="@style/CalcButton"
+                android:text=")"
+                android:layout_weight="0.5"/>
+
+            <Button
+                android:id="@+id/clearBtn"
+                style="@style/CalcButton"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/backspaceBtn"
+                style="@style/CalcButton"
+                android:text="&lt;-"/>
+
+            <Button
+                android:id="@+id/divBtn"
+                style="@style/CalcButton"
+                android:text="/" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+
+            <Button
+                android:id="@+id/sqrtBtn"
+                style="@style/CalcButton"
+                android:text="√" />
+
+            <Button
+                android:id="@+id/b7"
+                style="@style/CalcButton"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/b8"
+                style="@style/CalcButton"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/b9"
+                style="@style/CalcButton"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/mulBtn"
+                style="@style/CalcButton"
+                android:text="*" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+
+            <Button
+                android:id="@+id/rootBtn"
+                style="@style/CalcButton"
+                android:text="@string/numberRoot" />
+
+            <Button
+                android:id="@+id/b4"
+                style="@style/CalcButton"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/b5"
+                style="@style/CalcButton"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/b6"
+                style="@style/CalcButton"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/minusBtn"
+                style="@style/CalcButton"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+
+            <Button
+                android:id="@+id/logBtn"
+                style="@style/CalcButton"
+                android:text="@string/numberLog" />
+
+            <Button
+                android:id="@+id/b1"
+                style="@style/CalcButton"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/b2"
+                style="@style/CalcButton"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/b3"
+                style="@style/CalcButton"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/plusBtn"
+                style="@style/CalcButton"
+                android:text="+" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+
+            <Button
+                android:id="@+id/commaBtn"
+                style="@style/CalcButton"
+                android:text=","/>
+
+            <Button
+                android:id="@+id/b0"
+                style="@style/CalcButton"
+                android:layout_weight="2"
+                android:text="0"/>
+
+            <Button
+                android:id="@+id/decimalBtn"
+                style="@style/CalcButton"
+                android:layout_weight="1"
+                android:text="." />
+
+            <Button
+                android:id="@+id/calcBtn"
+                style="@style/CalcButton"
+                android:text="=" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
